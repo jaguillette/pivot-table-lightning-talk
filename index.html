@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/dssg.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>(Re-)Shaping your Data</h1>
+					<p>Jeremy Guillette</p>
+					<p>History Department Digital Scholarship Facilitator</p>
+				</section>
+				<section>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Manifest_list_-_passengers_sailing_from_Barbados_1919_-_list_6.jpg" alt="LIST OR MANIFEST OF ALIEN PASSENGERS FOR THE UNITED...">
+				</section>
+				<section>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Hans_Rosling_2-fd0000_%289504183446%29.jpg" alt="Hans Rosling visualization example">
+				</section>
+				<section>
+					<img src="img/question.svg" alt="">
+				</section>
+				<section>
+					<h1 style="font-size:120pt;">PIVOT TABLE</h1>
+				</section>
+				<section>
+					<style>table#example tr :nth-of-type(3) { background-color: #dad; }</style>
+					<table id="example">
+						<tr><th>Place</th><th>Slave/Free State</th><th>Turnout</th><th>Year</th></tr>
+						<tr><td>Alabama</td><td>Slave</td><td>49.1</td><td>1824</td></tr>
+						<tr><td>Connecticut</td><td>Free</td><td>14.9</td><td>1824</td></tr>
+						<tr><td>Illinois</td><td>Free</td><td>24.3</td><td>1824</td></tr>
+						<tr><td>Indiana</td><td>Free</td><td>37.1</td><td>1824</td></tr>
+						<tr><td>Kentucky</td><td>Slave</td><td>25.4</td><td>1824</td></tr>
+						<tr><td>Maine</td><td>Free</td><td>19.1</td><td>1824</td></tr>
+						<tr><td>Maryland</td><td>Slave</td><td>53.7</td><td>1824</td></tr>
+					</table>
+				</section>
+				<section>
+					<p><strong>Easy: </strong>What was the turnout in Alabama in 1824?</p>
+					<p><strong>Hard: </strong>What was the average turnout for slave states in each year recorded?</p>
+				</section>
+				<section>
+					<video src="img/turnout.mov" controls></video>
+				</section>
+				<section>
+					<img src="img/turnout.png" alt="chart representing pivot table">
+				</section>
+				<section>
+					<h1 style="font-size:120pt;">PIVOT TABLE</h1>
+				</section>
+				<section>
+					<ul>
+						<li>Python</li>
+						<li>R</li>
+						<li>Excel</li>
+						<li>OpenRefine</li>
+						<li>Mr. Data Converter</li>
+					</ul>
+				</section>
+				<section>
+					<h2>dssg.fas.harvard.edu</h2>
+					<img src="img/net-with-braces.png" alt="" style="border:none; box-shadow:none; max-height:55vh;">
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
