@@ -1,8 +1,6 @@
-# DSSG Slide Template
+# Pivot Table lightning talk slides
 
-This is a template for creating presentations in [reveal.js](https://github.com/hakimel/reveal.js).
-Everything is HTML and JS, so changes to the slides can be easily tracked.
-
-To use this template, just clear out the body of `index.html` and start adding
-your own slides in `<section>` tags. See the [reveal.js repository]([reveal.js](https://github.com/hakimel/reveal.js))
-for detailed documentation setting up the slides.
+These are the slides for a lightning talk on pivot tables that I've given a
+couple of times at Unabridged. It's a very short introduction to thinking
+differently about data in spreadsheets. It uses
+[reveal.js](https://github.com/hakimel/reveal.js/) as a presentation framework.

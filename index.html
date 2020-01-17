@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>PIVOT TABLES</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -43,20 +43,72 @@
 				<section>
 					<h1>(Re-)Shaping your Data</h1>
 					<p>Jeremy Guillette</p>
-					<p>History Department Digital Scholarship Facilitator</p>
+					<p>Instructional Technologist <br/>(FAS Academic Technology)<br/><a href="mailto:atg@fas.harvard.edu">atg@fas.harvard.edu</a></p>
+					<aside class="notes">
+						Hello, I'm Jeremy Guillette. I'm an instructional technologist with
+						Academic Technology for the Faculty of Arts and Sciences here at
+						Harvard, so it's my job to help faculty and students use technology
+						in research and teaching.
+					</aside>
 				</section>
+
 				<section>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Manifest_list_-_passengers_sailing_from_Barbados_1919_-_list_6.jpg" alt="LIST OR MANIFEST OF ALIEN PASSENGERS FOR THE UNITED...">
+					<aside class="notes">
+						I've worked with quite a few historians, and often, if a historian
+						wants to do the kind of large scale analysis that requires some
+						kind of statistics, their data isn't a friendly modern data source,
+						it's a messy paper document like this one, a list of passengers
+						sailing from Barbados in 1919. When this data was collected, any
+						analysis you could perform would be very manual. If you wanted to
+						know how many people were recorded as "male" in this document,
+						you'd have to count them. If you wanted the average age, you'd have
+						to calculate that manually. And if you want to calculate the
+						average ages of men and women in this document, be prepared for
+						more manual math.
+					</aside>
 				</section>
+
+				<section>
+					<img src="https://the-public-domain-review.imgix.net/collections/w-e-b-du-bois-hand-drawn-infographics-of-african-american-life-1900/32610916582_9da5ed85c1_o.jpg" alt="Spiraling, hand-drawn bar chart representing the growth of the value of household and kitchen furniture owned by black people in Georgia from 1875 to 1899">
+					<aside class="notes">
+						This makes the work of pioneers like W.E.B. Dubois all the more
+						impressive, knowing that compelling visualizations like this one
+						were generated without the help of the tools available to us today.
+					</aside>
+				</section>
+
 				<section>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Hans_Rosling_2-fd0000_%289504183446%29.jpg" alt="Hans Rosling visualization example">
+					<aside class="notes">
+						But how do we get from messy old paper data to compelling
+						visualizations like Hans Rosling's well-known animated
+						visualization showing life expectancy, GDP, and population over
+						time?
+					</aside>
 				</section>
+
 				<section>
-					<img src="img/question.svg" alt="">
+					<img src="img/question.svg" alt="?">
+					<aside class="notes">
+						Part of the equation is still a lot of elbow grease in
+						transcribing data into a spreadsheet form. But the reason to go
+						through the trouble is that once the data is electronic and
+						structured, it becomes much more flexible, so you can ask more
+						sophisticated questions of a given data source.
+					</aside>
 				</section>
+
 				<section>
 					<h1 style="font-size:120pt;">PIVOT TABLE</h1>
+					<aside class="notes">
+						The tool that I want to add to your toolbox today is called a pivot
+						table. I've written it very large and given it its own slide,
+						because I want you to remember what this tool is called, so even if
+						you forget how it works, you can easily look it up later.
+					</aside>
 				</section>
+
 				<section>
 					<style>table#example tr :nth-of-type(3) { background-color: #dad; }</style>
 					<table id="example">
@@ -69,32 +121,96 @@
 						<tr><td>Maine</td><td>Free</td><td>19.1</td><td>1824</td></tr>
 						<tr><td>Maryland</td><td>Slave</td><td>53.7</td><td>1824</td></tr>
 					</table>
+					<aside class="notes">
+						Take this sample data. We have a good structure here, with each row
+						representing a single point of data and telling us about it. We
+						have turnout percentages, and the other columns answer questions
+						about those data points. Where was that turnout observed? When was
+						it observed?
+					</aside>
 				</section>
+
 				<section>
 					<p><strong>Easy: </strong>What was the turnout in Alabama in 1824?</p>
 					<p><strong>Hard: </strong>What was the average turnout for slave states in each year recorded?</p>
+					<aside class="notes">
+						There are different questions that you might want to ask of this
+						data, some of which will be more difficult to answer than others
+						from just looking at the data. You can find the data point to
+						answer the first question, but to find the average turnout for
+						states with legal slavery as of the start of the civil war, it
+						seems like you'd need to do a lot of math. Or, you can use a pivot
+						table. I'll show you how it works in Google Sheets.
+					</aside>
 				</section>
+
 				<section>
 					<video src="img/turnout.mov" controls></video>
+					<aside class="notes">
+						Under Data, you'll find "Pivot table...". This creates a new blank
+						sheet with some additional options. I can set the rows to years,
+						the columns to slave state / free state, and the values to Turnout,
+						and then change how they're summarized from SUM to AVERAGE. Then
+						I'll change the display of the values to "Number". So what I've
+						created is a new spreadsheet, with the unique values for years as
+						rows and the unique values for slave vs. free state for columns,
+						and then tell the spreadsheet to take all of the values at the
+						intersections of those conditions and summarize them as an average.
+						So whatever data we have in our initial spreadsheet for free states
+						in 1824, the pivot table has found all of those values and combined
+						them into an average. and then done the same for all of the other
+						combinations shown.
+					</aside>
 				</section>
+
 				<section>
 					<img src="img/turnout.png" alt="chart representing pivot table">
+					<aside class="notes">
+						With the data in a pivot table, you can then make a chart like you
+						would normally in Google Sheets that highlights broader trends,
+						like how you can see the lasting influence of confederate states on
+						voter turnout in this line chart.
+					</aside>
 				</section>
+
 				<section>
 					<h1 style="font-size:120pt;">PIVOT TABLE</h1>
+					<aside class="notes">
+						Hopefully I've convinced you that a pivot table is something that
+						can help you with spreadsheet data, so I'm writing it in giant
+						letters again.
+					</aside>
 				</section>
+
 				<section>
 					<ul>
-						<li>Python</li>
-						<li>R</li>
-						<li>Excel</li>
-						<li>OpenRefine</li>
-						<li>Mr. Data Converter</li>
+						<li>Excel / Google Sheets</li>
+						<li><a href="https://www.anaconda.com/">Python</a></li>
+						<li><a href="https://rstudio.com/">R</a></li>
+						<li><a href="https://openrefine.org/">OpenRefine</a></li>
+						<li><a href="https://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a></li>
 					</ul>
+					<aside class="notes">
+						Pivot tables are great, but there are other ways that you can make
+						spreadsheet data work for you with other tools, whether they're
+						scripts in python or R, specialized programs like OpenRefine, or
+						weird little internet tools like Mister Data Converter.
+					</aside>
 				</section>
+
 				<section>
 					<h2>dssg.fas.harvard.edu</h2>
-					<img src="img/net-with-braces.png" alt="" style="border:none; box-shadow:none; max-height:55vh;">
+					<img src="css/theme/net-with-braces.svg" alt="" style="border:none; box-shadow:none; max-height:55vh;">
+					<aside class="notes">
+						If you're interested in using digital tools in your research or
+						teaching, check out the website for the DSSG. It's a group that I'm
+						a part of that brings together folks who work on digital
+						scholarship from different groups around Harvard. We put on a
+						variety of events every semester, including our upcoming
+						introduction to digital scholarship seminar, where you can dig deep
+						into data-driven research workflows for the humanities and social
+						sciences.
+					</aside>
 				</section>
 			</div>
 
